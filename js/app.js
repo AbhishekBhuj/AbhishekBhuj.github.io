@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 'starter.services', 'firebase'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,6 +23,37 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
   });
 })
 
+.run(function ($window, $rootScope, $location, Auth) {
+  $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+    console.log(event, toState, toParams, fromState, fromParams);
+
+    /*if ($window.sessionStorage.getItem('reload')) {
+        $window.sessionStorage.removeItem('reload');
+        setTimeout(function() {
+            $window.location.reload();
+            //$location.path('/tab/dash');
+        }, 1000);
+    }*/
+    //console.log(Auth.$getAuth());
+    var authData = Auth.$getAuth();
+        if (!authData) {
+            console.log('User not logged in yet');
+            $location.path('/login');
+        }
+        else {
+            console.log("User " + authData.uid + " is logged in with " + authData.provider);
+            if(toState.url === '/login') {
+              $location.path('/tab/dash');
+            }
+            if(toState.url === '/logout') {
+              Auth.$unauth();
+              $location.path('/login');
+            }
+            //$location.path('/home');
+        }
+    });
+})
+
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
@@ -32,6 +63,18 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
   $stateProvider
 
   // setup an abstract state for the tabs directive
+    .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  })
+
+    .state('logout', {
+    url: '/logout',
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  })
+
     .state('tab', {
     url: '/tab',
     abstract: true,
@@ -87,9 +130,40 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
         controller: 'DashCtrl'
       }
     }
+  })
+
+  .state('tab.firechat', {
+    url: '/firechat',
+    views: {
+      'tab-firechat': {
+        templateUrl: 'templates/tab-firechat.html',
+        controller: 'FirebaseCtrl'
+      }
+    }
+  })
+
+  .state('tab.firechat-detail', {
+      url: '/firechats/:chatId',
+      params: { uid: { value: -1 } },
+      views: {
+        'tab-firechat': {
+          templateUrl: 'templates/tab-firechat-details.html',
+          controller: 'FireChatDetailsCtrl'
+        }
+      }
+    })
+
+  .state('tab.invitations', {
+    url: '/invitations',
+    views: {
+      'tab-invitations': {
+        templateUrl: 'templates/tab-invitations.html',
+        controller: 'InvitationsCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/login');
 
 });
