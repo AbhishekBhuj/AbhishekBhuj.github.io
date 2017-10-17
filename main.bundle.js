@@ -42,7 +42,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // Note there is no import of the HrSearchComponent or reference
 // to './hr-files-search.component'.
 var routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'home' },
+    { path: '', pathMatch: 'full', redirectTo: 'run-my-party' },
     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_2__home_home_component__["a" /* HomeComponent */] },
     { path: 'run-my-party', component: __WEBPACK_IMPORTED_MODULE_3__run_my_party_run_my_party_component__["a" /* RunMyPartyComponent */], data: { title: 'RUN MY PARTY' } }
     // Add more routes here
