@@ -282,9 +282,9 @@ self.addEventListener('fetch', function(event) {
   }
 });
 
-/*self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', function(event) {
   event.notification.close();
-  var url = 'http://localhost:9001';
+  var url = event.currentTarget.location.origin;
   event.waitUntil(
     clients.matchAll({
       type: 'window'
@@ -298,7 +298,7 @@ self.addEventListener('fetch', function(event) {
         }
       })
   );
-});*/
+});
 
 // Register event listener for the 'push' event.
 self.addEventListener('push', function(event) {
