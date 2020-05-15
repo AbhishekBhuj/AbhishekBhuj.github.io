@@ -1,0 +1,17 @@
+<svg width="50" height="50" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Rectangle</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(526 425)" figma:type="canvas">
+<rect x="-526" y="-425" width="50" height="50" fill="#E5E5E5"/>
+<g id="Rectangle" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path0_fill" transform="matrix(1 -3.46945e-18 3.46945e-18 1 -526 -425)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+<g id="CIK" style="mix-blend-mode:normal;" figma:type="text">
+<use xlink:href="#path1_fill" transform="translate(-526 -425)" fill="#EB3812" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 0L 50 0L 50 50L 0 50L 0 0Z"/>
+<path id="path1_fill" d="M 14.8398 19.9551C 13.4727 19.9551 12.4141 20.4707 11.6641 21.502C 10.9141 22.5254 10.5391 23.9551 10.5391 25.791C 10.5391 29.6113 11.9727 31.5215 14.8398 31.5215C 16.043 31.5215 17.5 31.2207 19.2109 30.6191L 19.2109 33.666C 17.8047 34.252 16.2344 34.5449 14.5 34.5449C 12.0078 34.5449 10.1016 33.791 8.78125 32.2832C 7.46094 30.7676 6.80078 28.5957 6.80078 25.7676C 6.80078 23.9863 7.125 22.4277 7.77344 21.0918C 8.42188 19.748 9.35156 18.7207 10.5625 18.0098C 11.7812 17.291 13.207 16.9316 14.8398 16.9316C 16.5039 16.9316 18.1758 17.334 19.8555 18.1387L 18.6836 21.0918C 18.043 20.7871 17.3984 20.5215 16.75 20.2949C 16.1016 20.0684 15.4648 19.9551 14.8398 19.9551ZM 22.8672 34.3105L 22.8672 17.1777L 26.5 17.1777L 26.5 34.3105L 22.8672 34.3105ZM 44.5938 34.3105L 40.4688 34.3105L 35.9805 27.0918L 34.4453 28.1934L 34.4453 34.3105L 30.8125 34.3105L 30.8125 17.1777L 34.4453 17.1777L 34.4453 25.0176L 35.875 23.002L 40.5156 17.1777L 44.5469 17.1777L 38.5703 24.7598L 44.5938 34.3105Z"/>
+</defs>
+</svg>
