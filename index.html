@@ -1,10 +1,150 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SuOrganics</title><base href="/"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport"/><meta name="viewport" content="width=device-width"/><link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"><link href="styles.c3f2c1430c451d2931f6.bundle.css" rel="stylesheet"/></head><body><app-root></app-root><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-111545798-1"></script><script>window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en" ng-app="onDemandCook">
+<head>
 
-    gtag('config', 'UA-111545798-1');</script><!-- BEGIN PRIVY ASYNCHRONOUS WIDGET CODE --><script type="text/javascript">var _d_site = _d_site || '1CEAA455D6D7EA02A7450A99';
-    (function(p, r, i, v, y) {
-      p[i] = p[i] || function() { (p[i].q = p[i].q || []).push(arguments) };
-      v = r.createElement('script'); v.async = 1; v.src = '//widget.privy.com/assets/widget.js';
-      y = r.getElementsByTagName('script')[0]; y.parentNode.insertBefore(v, y);
-    })(window, document, 'Privy');</script><!-- END PRIVY ASYNCHRONOUS WIDGET CODE --><script type="text/javascript" src="inline.2a736667731bd08e9f67.bundle.js"></script><script type="text/javascript" src="polyfills.038ebef1be88f3bc7ce7.bundle.js"></script><script type="text/javascript" src="vendor.26b67b75df162cfeb074.bundle.js"></script><script type="text/javascript" src="main.af06e4aa802d6aa28aee.bundle.js"></script></body></html>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="abhi"/>
+    <meta name="keywords" content="kitchen, cook, baker, chef, professional, near me, cuisine, dish, bake, curry, kurry, saltdkurry"/>
+    <meta name="theme-color" content="#F05F40"/>
+    <base href="/">
+
+    <meta name="description" content="SaltdKurry is an online community of cooks and bakers. Order homemade food or book a personal cook on-demand and treat yourself something special today">
+    <link rel="canonical" href="https://www.saltdkurry.com">
+
+    <title>SaltdKurry | For the love of homemade food</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        // none for localhost
+        ga('create', 'UA-90238536-1', 'auto');
+        //ga('send', 'pageview');
+
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <!--<script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/579cb1160d4930e271d6598b/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>-->
+    <!--End of Tawk.to Script-->
+
+    <link rel="manifest" href="../manifest.json?v=1.1">
+
+    <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
+    <link rel="icon" type="image/png" href="../img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../img/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/favicon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favicon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/favicon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/favicon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/favicon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon-180x180.png">
+
+    <meta name="apple-mobile-web-app-title" content="SaltdKurry">
+
+    <link rel="preload" href="../js/vendor-v1.0.js" as="script">
+    <link rel="preload" href="../js/app-1517904489010.js" as="script">
+    <link rel="preload" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ5ZVgsDYReFzN7oY1jBOAYsng2k1Xim4&libraries=places,geometry" as="script">
+    <link rel="preload" href="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" as="script">
+    <link rel="preload" href="https://js.stripe.com/v2/" as="script">
+
+</head>
+
+<style>
+    /* Center the loader */
+    .loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+
+<body id="page-top" ng-class="bodyImageClass" flow-prevent-drop>
+
+    <nav-bar></nav-bar>
+
+    <ui-view id="mainView">
+        <div class="loader"></div>
+    </ui-view>
+
+    <sk-footer></sk-footer>
+
+    <link async defer href="../css/vendor-v1.0.css" rel="stylesheet">
+    <link async defer href="../css/app-1517904489010.css" rel="stylesheet">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ5ZVgsDYReFzN7oY1jBOAYsng2k1Xim4&libraries=places,geometry" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+
+    <script type="text/javascript" src="https://js.stripe.com/v2/" async defer></script>
+
+    <script defer type="text/javascript">
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration);
+            /*registration.pushManager.subscribe({
+                userVisibleOnly: true
+            }).then(function(sub) {
+                console.log('endpoint:', sub.endpoint);
+            });*/
+        }).catch(function(err) {
+            // registration failed
+            console.log('ServiceWorker registration failed: ', err); });
+        }
+    </script>
+
+    <noscript>
+        JavaScript is essential for this website to deliver its services. We promise we'll behave.
+    </noscript>
+
+    <script defer type="text/javascript" src="../js/vendor-v1.0.js"></script>
+    <script defer type="text/javascript" src="../js/app-1517904489010.js"></script>
+
+</body>
+
+</html>
